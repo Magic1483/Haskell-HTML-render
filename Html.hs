@@ -9,7 +9,8 @@ module Html
     append_,
     render,
     code_,
-    link_
+    link_,
+    getStructureString
   )
 where
 
@@ -22,7 +23,7 @@ type Title = String
 -- styles
 cs :: String = "style=background-color:rgb(237,231,225);width:fit-content;padding:1rem"
 body_style :: String = "style=width:50%;margin:auto;margin-top:10px"
-
+link_style ::String = "width:100%"
 -- html PRINTER (⌐■_■)
 html_ :: Title -> Structure -> Html
 html_ title content =
@@ -40,7 +41,7 @@ p_ :: String -> Structure
 p_ text = Structure (el "p" text "")
 
 link_ :: String -> String -> Structure
-link_ text link = Structure ("<a href=" <> link <> ">" <> text <> "</a>")
+link_ text link = Structure ("<a href=" <> link <> " style=" <> link_style <> ">" <> text <> "</a>")
 
 h1_ :: String -> Structure
 h1_ text = Structure (el "h1" text "")
