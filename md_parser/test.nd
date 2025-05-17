@@ -1,0 +1,15 @@
+
+* it's like markdown but not markdown
+
+# ordered list 
+# check
+# !
+
+- unordered
+- list
+- check
+
+* code block below
+
+> def uAreDumb():
+>   returh "0"
